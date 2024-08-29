@@ -12,8 +12,9 @@
 }
 
 body {
+    min-height: 100vh;
     background: url(./images/bg-desktop.svg) no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: hsl(257, 40%, 49%);
 }
 
@@ -75,6 +76,7 @@ body {
     font-family: var(--f-open-sans);
     font-weight: 400;
     font-size: 1.2rem;
+    line-height: 30px;
     width: 80%;
 }
 
@@ -135,4 +137,72 @@ body {
 
 .social-media:hover .social-media-svg {
     color: hsl(300, 69%, 71%);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1310px) {
+    .main-content-right > h1 {
+        font-size: 3rem;
+        line-height: 50px;
+    }
+    .main-content-right > p {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1135px){
+    .main-content-right > h1 {
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+    .main-content-right > p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+    body {
+        background: url(./images/bg-mobile.svg) no-repeat;
+        background-size: contain;
+        background-color: hsl(257, 40%, 49%);
+    }
+    .main-content-right > h1 {
+        font-size: 2rem;
+        line-height: 35px;
+        text-align: center;
+    }
+    .main-content-right > p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 25px;
+        width: 100%;
+    }
+    .main-content-right {
+        align-items: center;
+    }
+    .social-media-apps {
+        margin-top: 40px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content-right {
+        row-gap: 15px;
+    }
+    .main-content-right > h1 {
+        line-height: 40px;
+        font-size: 1.9rem;
+    }
+    .register-button {
+        font-size: 0.9rem;
+    }
+    .wrapper {
+        padding: 40px 25px;
+    }
 }
